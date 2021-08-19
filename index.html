@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rock Paper Scissor</title>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Rancho&effect=shadow-multiple|3d-float"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap"
+    />
+
+    <link rel="stylesheet" href="rockPaper.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h2 class="font-effect-shadow-multiple">Rock,Paper &amp; Scissors</h2>
+      <div class="image">
+        <img
+          src="https://icon-library.com/images/rock-paper-scissors-icon/rock-paper-scissors-icon-14.jpg"
+          title="Rock"
+          onclick="startGame('rock')"
+        />
+        <img
+          src="https://icon-library.com/images/rock-paper-scissors-icon/rock-paper-scissors-icon-17.jpg"
+          title="Paper"
+          onclick="startGame('paper')"
+        />
+        <img
+          src="https://icon-library.com/images/rock-paper-scissors-icon/rock-paper-scissors-icon-15.jpg"
+          title="Scissors"
+          onclick="startGame('Scissors')"
+        />
+      </div>
+      <p class="winner">Choose Your Move</p>
+      <div id="score">
+        <span class="sides">User : 0</span>
+        <span class="sides">Computer : 0</span>
+      </div>
+    </div>
+    <script src="rockPaper.js"></script>
+  </body>
+</html>
