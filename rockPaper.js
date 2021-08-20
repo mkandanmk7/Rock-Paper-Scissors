@@ -29,6 +29,7 @@ function startGame(start) {
 
 function compare(choice1, choice2) {
   if (choice1 === choice2) {
+    //both choices are same then tie
     return "Its a tie!";
   } else if (choice1 === "rock") {
     if (choice2 === "scissors") {
