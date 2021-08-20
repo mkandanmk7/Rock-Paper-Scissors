@@ -9,11 +9,11 @@ function startGame(start) {
   let winner = compare(yourChoice, computerChoice); //comparision;
   whoWins.classList = ""; //empty the winners class list.
 
-  if (winner == "User") {
-    whoWins.innerHTML = winner + "wins";
+  if (winner == "You") {
+    whoWins.innerHTML = winner + " Wins";
     whoWins.classList.add("win"); //adding to the class list;
   } else if (winner == "Computer") {
-    whoWins.innerHTML = winner + "wins";
+    whoWins.innerHTML = winner + " Wins";
     whoWins.classList.add("lose"); //lose
   } else {
     whoWins.innerHTML = winner; //print to the choose Your move
@@ -27,33 +27,33 @@ function startGame(start) {
 
 //comparision choice;
 
-function compare(choice1, choice2) {
-  if (choice1 === choice2) {
+function compare(yourChoice, computerChoice) {
+  if (yourChoice === computerChoice) {
     //both choices are same then tie
     return "Its a tie!";
-  } else if (choice1 === "rock") {
-    if (choice2 === "scissors") {
+  } else if (yourChoice === "rock") {
+    if (computerChoice === "scissors") {
       yourScore++;
-      return "User";
-    } else if (choice2 === "paper") {
+      return "You";
+    } else if (computerChoice === "paper") {
       computerScore++;
       return "Computer";
     }
-  } else if (choice1 === "paper") {
-    if (choice2 === "scissors") {
+  } else if (yourChoice === "paper") {
+    if (computerChoice === "scissors") {
       computerScore++;
       return "Computer";
-    } else if (choice2 === "rock") {
+    } else if (computerChoice === "rock") {
       yourScore++;
-      return "User";
+      return "You";
     }
-  } else if (choice1 === "scissors") {
-    if (choice2 === "rock") {
+  } else if (yourChoice === "scissors") {
+    if (computerChoice === "rock") {
       computerScore++;
       return "Computer";
-    } else if (choice2 === "paper") {
+    } else if (computerChoice === "paper") {
       yourScore++;
-      return "User";
+      return "You";
     }
   }
 }
